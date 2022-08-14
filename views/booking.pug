@@ -1,0 +1,23 @@
+extends layout.pug
+
+block title
+  title Formularz rezerwacji
+
+block content
+  main
+    form#booking_form(method='post')
+      ul
+        li
+          label(for='name') Imię:
+          input#name(type='text' name='name' maxlength='40' required='')
+        li
+          label(for='surname') Nazwisko:
+          input#surname(type='text' name='surname' maxlength='40' required='')
+        li
+          label(for='email') E-mail:
+          input#email(type='email' name='email' required='')
+        li
+          label(for='participants') Liczba uczestników:
+          input#participants(type='number' name='participants', min='1' required='')
+      button#submit(type='submit') Send
+      

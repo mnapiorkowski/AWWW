@@ -1,0 +1,12 @@
+mixin new_trip(id, name, description, price, imageSrc)
+  article
+    img.trip_image(src=imageSrc)
+    .trip_summary
+      h2
+        a.trip_link(href=`/trip?id=${id}`) #{name}
+      p
+        | #{description}
+        br
+        br
+        | cena: #{price}
+        a.book_link(href=`/book?id=${id}`) Zarezerwuj &gt;&gt;

@@ -1,0 +1,28 @@
+extends layout.pug
+include trips_list.pug
+include promos.pug
+
+block content
+  .grid_container
+    main#trips
+      each t in trips
+        +new_trip(t.id, t.name, t.short_descr, t.price, t.image)
+      else
+        p Przepraszamy, brak aktualnych wycieczek :(
+        
+    aside#extras
+      section#promos
+        h2 Promocje
+        each p in promos
+          +new_promo(p.name, p.price)
+        else
+          p Przepraszamy, brak aktualnych promocji :(
+      section#advice
+        h2 Porady
+        ul
+          li
+            a(href='') Co zabrać na wycieczkę?
+          li
+            a(href='') Kiedy najlepiej wyjechać?
+          li
+            a(href='') Jakie buty wybrać?

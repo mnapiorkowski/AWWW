@@ -1,0 +1,48 @@
+extends layout.pug 
+
+block content
+  main
+    img.main_image(src=trip.image)
+    h1.trip_name=trip.name
+    p.intro
+      | Poleć z nami do świata Star Wars,
+      | przeżyj niezapomniane przygody i spotkaj legendarne postaci!
+      | Niech Moc będzie z tobą!
+      | Poleć z nami do świata Star Wars,
+      | przeżyj niezapomniane przygody i spotkaj legendarne postaci!
+      | Niech Moc będzie z tobą!    
+      | Poleć z nami do świata Star Wars,
+      | przeżyj niezapomniane przygody i spotkaj legendarne postaci!
+      | Niech Moc będzie z tobą!
+    h2 Niezapomniane przygody!
+    p
+      | Weź udział w najważniejszych wydarzeniach w Galaktyce!
+      | W ofercie m.in. rozkaz 66, bitwa na Hoth, czy atak na Gwiazdę Śmierci.
+      | Weź udział w najważniejszych wydarzeniach w Galaktyce!
+      | W ofercie m.in. rozkaz 66, bitwa na Hoth, czy atak na Gwiazdę Śmierci.
+      | Weź udział w najważniejszych wydarzeniach w Galaktyce!
+      | W ofercie m.in. rozkaz 66, bitwa na Hoth, czy atak na Gwiazdę Śmierci.
+    h2 Legendarne postaci!
+    p
+      | Trenuj walkę mieczem świetlnym z Obi-Wanem Kenobim,
+      | lataj Sokołem Milenium z Hanem Solo,
+      | przeżyj (lub nie) pojedynek z Darthem Vaderem!
+      | Trenuj walkę mieczem świetlnym z Obi-Wanem Kenobim,
+      | lataj Sokołem Milenium z Hanem Solo,
+      | przeżyj (lub nie) pojedynek z Darthem Vaderem!
+      | Trenuj walkę mieczem świetlnym z Obi-Wanem Kenobim,
+      | lataj Sokołem Milenium z Hanem Solo,
+      | przeżyj (lub nie) pojedynek z Darthem Vaderem!
+    h2 Istotne informacje
+    ul.info_list
+      li Termin: dawno dawno temu
+      li Cena: 20 tys. kredytów
+      li Przewidywane temperatury: od -200 do +80 stopni C
+    h2 Program wycieczki
+    ol
+      li Tatooine
+      li Hoth
+      li Naboo
+    .bottom_links
+      a#back_button.bottom_link(href='/') &lt; Powrót
+      a#book_button.bottom_link(href=`/book?id=${trip.id}`) Zarezerwuj &gt;

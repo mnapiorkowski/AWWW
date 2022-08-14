@@ -1,0 +1,33 @@
+doctype html
+head
+  block title
+    title Fantastic Travels
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  style
+    include ../public/css/stylesheet.css
+  block scripts
+
+header
+  a(href='/')
+    img.logo(src='/images/logo.png' alt='Logo' ,='')
+  span
+    | Fantastic Travels
+  nav
+    a(href='') Wycieczki lotnicze
+    a(href='') Wycieczki autokarowe
+    a(href='') Moje konto
+
+div#messages
+  each m in messages ? messages : [] 
+    p#message=m
+
+block content
+
+block footer
+  footer
+    span
+      | Fantastic Travels, 2022
+    nav
+      a(href='') O firmie
+      a(href='') Polityka prywatności
+      a(href='') Kontakt
